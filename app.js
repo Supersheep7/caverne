@@ -27,7 +27,7 @@ const userRouter = require('./routes/user');
 const lvlupRouter = require('./routes/lvlup')
 
 const app = express();
-app.use(cors({origin: "https://caverne-viverne.onrender.com/", credentials: true}));
+app.use(cors({origin: "https://caverne-viverne.onrender.com", credentials: true}));
 app.use(logger('dev'));
 app.use(
 	bodyParser.urlencoded({
