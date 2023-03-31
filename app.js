@@ -38,9 +38,9 @@ app.use(bodyParser.json())
 app.use(express.json());
 /*app.use(cookieParser());*/
 app.use(session({ 
+  store: MongoStore.create({ mongoUrl: mongoDB }),
   secret: process.env.SECRET, 
   resave: false, //required
-  store: MongoStore.create({ mongoUrl: mongoDB }),
   saveUninitialized: false, //required
   cookie: {
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
