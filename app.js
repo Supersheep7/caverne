@@ -27,7 +27,7 @@ const userRouter = require('./routes/user');
 const lvlupRouter = require('./routes/lvlup')
 
 const app = express();
-app.use(cors({origin: true, credentials: true}));
+app.use(cors());
 app.use(logger('dev'));
 app.use(
 	bodyParser.urlencoded({
